@@ -1,0 +1,31 @@
+{
+  "name": "flcrux",
+  "version": "0.1.0",
+  "description": "A simple irc bot framework for node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --watch ./lib ./test --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gb-gaming-hub/flcrux.git"
+  },
+  "keywords": [
+    "irc",
+    "bot",
+    "framework"
+  ],
+  "author": "Erik Nelson <io@eriknelson.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gb-gaming-hub/flcrux/issues"
+  },
+  "homepage": "https://github.com/gb-gaming-hub/flcrux#readme",
+  "dependencies": {
+    "irc": "^0.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "should": "^8.2.0"
+  }
+}
