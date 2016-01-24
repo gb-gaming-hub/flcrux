@@ -1,7 +1,7 @@
 'use strict';
 
 const _  = require('underscore');
-const should = require('should');
+const expect = require('chai').expect;
 
 const FLCrux = require('../index');
 const config = require('./config');
@@ -23,11 +23,11 @@ describe('flcrux', function() {
   });
 
   it('should export flcrux module', function() {
-    should.exist(FLCrux);
+    expect(FLCrux).to.be.ok;
   });
 
   it('should instantiate' , function() {
-    should.exist(flc);
+    expect(flc).to.be.ok;
   });
 
   it('should subscribe to expected listeners on init', function() {
@@ -35,7 +35,7 @@ describe('flcrux', function() {
     flc.init();
     const lm = mockClient.listenerMap;
     _.each(expectedSubs, (event) => {
-      lm.should.have.property(event).which.exists;
+      expect(lm).to.have.property(event).and.be.ok;
     });
   });
 
@@ -43,7 +43,7 @@ describe('flcrux', function() {
     const expectedPlugins = ['test', 'person'];
     flc.init();
     _.each(expectedPlugins, (plugin) => {
-      flc._plugins.should.have.property(plugin).which.exists;
+      expect(flc._plugins).to.have.property(plugin).and.be.ok;
     });
   });
 });
