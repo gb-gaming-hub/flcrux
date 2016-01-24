@@ -4,7 +4,8 @@
   "description": "A simple irc bot framework for node.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --watch ./lib ./test --recursive"
+    "test": "./node_modules/mocha/bin/mocha",
+    "test-w": "./node_modules/mocha/bin/mocha --watch ./lib ./test --recursive"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,9 @@
   },
   "homepage": "https://github.com/gb-gaming-hub/flcrux#readme",
   "dependencies": {
-    "irc": "^0.4.0"
+    "irc": "^0.4.0",
+    "simple-node-logger": "^0.92.21",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "mocha": "^2.3.4",
